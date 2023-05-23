@@ -10,9 +10,7 @@ export default function VegetableScreen() {
       {vegetables.map((vegetable, index) => {
         return (
           <Link key={index} href={`./${vegetable}`} asChild>
-            <Pressable>
-              {({ hovered, pressed }) => <Text>{vegetable}</Text>}
-            </Pressable>
+            <Pressable>{({ pressed }) => <Text>{vegetable}</Text>}</Pressable>
           </Link>
         );
       })}
