@@ -8,6 +8,7 @@ export default function AnimalScreen() {
       <Text>Animal</Text>
       <Link href="/modal">Go to modal</Link>
       <Link href="/random">Go to undeclared screen</Link>
+      <Link href="/entity">Go to entity</Link>
     </ScrollView>
   );
 }
