@@ -35,17 +35,17 @@ function useProtectedRoute(user: User) {
   const router = useRouter();
 
   React.useEffect(() => {
-    const isInTabs = segments.includes("vegetable");
-    console.log("segments", segments, isInTabs);
+    const isInVegetableTab = segments.includes("(vegetable)");
+    console.log("segments", segments, isInVegetableTab);
 
     if (
       // If the user is not signed in and the initial segment is not anything in the auth group.
       !user &&
-      isInTabs
+      isInVegetableTab
     ) {
       // Redirect to the sign-in page.
       router.replace("/sign-in");
-    } else if (user && isInTabs) {
+    } else if (user && isInVegetableTab) {
       // they are logged in, so it's okay.
     }
   }, [user, segments]);

@@ -5,9 +5,11 @@ import { Text, View } from "../../components/Themed";
 export default function Modal() {
   return (
     <ScrollView contentInsetAdjustmentBehavior="automatic">
-      <Stack.Screen />
-      <Text>Hi</Text>
-      <Link href="/modal/nested-stack-modal">Go to modal</Link>
+      <Stack.Screen options={{ title: "modal" }} />
+      <Text>Inside Modal</Text>
+      <Link href="/modal/nested-stack-modal">
+        Go to stack screen inside modal
+      </Link>
     </ScrollView>
   );
 }
